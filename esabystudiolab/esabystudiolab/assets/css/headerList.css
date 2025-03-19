@@ -1,0 +1,63 @@
+.list-header {
+  display: flex;
+}
+
+.list {
+  padding-left: 50px;
+}
+
+.list li {
+  list-style: none;
+  margin-bottom: 2px;
+}
+
+.list li a {
+  font-family: "Lato", Sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.list li button {
+  font-family: "Lato", Sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.list li button:hover {
+  font-weight: 500 !important;
+  border-bottom: 1px solid black;
+}
+
+.list li a:hover {
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid black;
+}
+
+#levelOne .list li button {
+  font-family: "Lato", Sans-serif;
+  font-size: 13px;
+}
+
+#levelOneProject .list li button {
+  font-family: "Lato", Sans-serif;
+  font-size: 13px;
+}
+
+.active {
+  font-weight: 500 !important;
+  border-bottom: 1px solid black !important;
+}
+
+.uppercase li button {
+  text-transform: uppercase;
+}
+
+.uppercase li a {
+  text-transform: uppercase;
+}
+
+.list li button {
+  border: none;
+  background-color: transparent;
+  padding: 0px;
+}

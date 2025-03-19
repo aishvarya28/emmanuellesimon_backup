@@ -1,0 +1,224 @@
+.filtre {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.other-title {
+  font-family: "Lato", Sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.filtre button {
+  display: flex;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  border: none;
+  background-color: transparent;
+}
+
+#second-filtre {
+  margin-top: 10px;
+}
+
+.filtre .filtre-selected:before {
+  content: " \2B24";
+  font-size: 1em;
+}
+
+.filtre button:before {
+  content: " \25EF";
+  font-size: 1em;
+  margin-right: 5px;
+  font-style: normal;
+}
+
+.view-column {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.view-column button {
+  border: none;
+  background: none;
+  font-size: 1.1em;
+}
+
+.view-active svg rect {
+  stroke-width: 1.4;
+}
+
+#list-produit {
+  display: grid;
+  gap: 40px 1.5%;
+}
+
+.three-column {
+  grid-template-columns: repeat(3, calc((100% - (1.5% * 2)) / 3));
+}
+
+.four-column {
+  grid-template-columns: repeat(4, calc((100% - (1.5% * 3)) / 4));
+}
+
+.five-column {
+  grid-template-columns: repeat(5, calc((100% - (1.5% * 4)) / 5));
+}
+
+.produit {
+  display: flex;
+  flex-direction: column;
+  font-family: "magneta", Sans-serif;
+}
+
+.img-product {
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.1s;
+}
+
+.figure {
+  position: relative;
+}
+
+.figure img.Sirv.image-hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.figure:hover img.Sirv.image-hover {
+  opacity: 1;
+}
+
+.line-one {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.line-two {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.name a {
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.name a:hover {
+  font-weight: 600;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+.more a {
+  color: black;
+  text-decoration: none;
+  font-style: italic;
+  font-family: "magneta";
+  font-weight: 400;
+  text-decoration: none;
+  /* transition: font-weight 0.5s ease-in-out; */
+  /* transition: text-decoration 0.5s ease-in-out; */
+}
+
+.tag {
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.fav {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.price {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.produit:hover .fav {
+  opacity: 1;
+}
+
+.produit:hover .price {
+  opacity: 1;
+}
+
+.produit:hover .more a {
+  text-decoration: underline;
+  font-weight: 400;
+  font-family: "magneta";
+}
+
+/* .more a:after {
+  font-family: serif;
+  content: " \25CF";
+  font-style: normal;
+} */
+
+.more a:hover {
+  text-decoration: underline;
+  font-weight: 400;
+  font-family: "magneta";
+}
+
+/* .more a:hover:after {
+  font-family: serif;
+  content: " \25CF";
+  font-style: normal;
+  text-decoration: none;
+} */
+
+.tag {
+  font-weight: 400;
+}
+
+.price {
+  font-weight: 400;
+}
+
+@media screen and (max-width: 480px) {
+  #view-five {
+    display: none;
+  }
+
+  .filtre {
+    overflow-x: scroll;
+    width: 100%;
+    justify-content: left;
+  }
+
+  .fav {
+    display: none;
+  }
+
+  .price {
+    display: none;
+  }
+
+  .three-column {
+    grid-template-columns: repeat(1, calc((100% - (1.5% * 0)) / 1));
+  }
+
+  .four-column {
+    grid-template-columns: repeat(2, calc((100% - (1.5% * 1)) / 2));
+  }
+}
